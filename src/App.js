@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom'
+import BoxingGear from './components/BoxingGear.js'
+import FullGear from './components/FullGear.js'
+import JitsuGear from './components/JitsuGear.js'
+import ThaiGear from './components/ThaiGear.js'
+import Nav from './components/Nav.js'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav/>
+      <Routes>
+        <Route path='/' element={<FullGear/>} />
+        <Route path='/boxing' element={<BoxingGear/>} />
+        <Route path='/jiujitsu' element={<JitsuGear/>} />
+        <Route path='/muaythai' element={<ThaiGear/>} />
+      </Routes>
     </div>
   );
 }
