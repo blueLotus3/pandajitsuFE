@@ -1,19 +1,21 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import data from './GearApi.js'
 
+const IndivGear = () => {
 
-const FullGear = () => {
+    const gear = data + id;
 
-    const gear = data;
     return (
-        <div className="fullDiv">
+        <div className="IndivDiv">
+            <Link to={'/'}>X</Link>
             <ul>
             {gear.map((item) => (
             <li key={item.id}>
-                <img src={item.gearPic} alt="PandaJitsuGear"></img>
                 <p>{item.gearName}</p>
+                <img src={item.gearPic} alt="PandaJitsuGear"></img>
                 <p>${item.gearPrice}</p>
+                <p>{item.gearDesc}</p>
                 </li>
             ))}
             </ul>
@@ -21,4 +23,4 @@ const FullGear = () => {
     ) 
 }
 
-export default FullGear
+export default IndivGear

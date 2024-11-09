@@ -1,32 +1,34 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
 const Nav = () => {
 
     return (
-        <header className="header">
             <nav className="navbar">
-                <ul class="nav-menu">
             <Link to ='/'>
-                <li className="navlink"><p className="nav">Panda Jitsu Gear</p></li>
+            <img src={'https://res.cloudinary.com/ds7w3ysag/image/upload/v1638827235/Screen_Shot_2021-12-06_at_1.46.01_PM_psnicm.png'} alt="pandaLogo" className="pandaLogo"/>
+            </Link>
+                <ul>
+            <Link to ='/'>
+                <li className="nav-item"><p className="nav-link">Panda Jitsu Gear</p></li>
                 </Link>
-                <Link to ='/boxing'>
-                <li className="navlink"><p className="nav-item">Boxing Gear</p></li>
+            <Link to ='/boxing'>
+                <li className="nav-item"><p className="nav-link">Boxing Gear</p></li>
                 </Link>
-                <Link to ='/jiujitsu'>
-                <li className="navlink"><p className="nav-item">Jiu Jitsu Gear</p></li>
+            <Link to ='/jiujitsu'>
+                <li className="nav-item"><p className="nav-link">Jiu Jitsu Gear</p></li>
                 </Link>
-                <Link to ='/muaythai'>
-                <li className="navlink"><p className="nav-item">Muay Thai Gear</p></li>
+            <Link to ='/muaythai'>
+                <li className="nav-item"><p className="nav-link">Muay Thai Gear</p></li>
                 </Link>
                 </ul>
+                <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
                 </nav>
-                <div className= "hamburger">
-                <span className="bar"></span>
-                <span className="bar"></span>
-                <span className="bar"></span>
-                </div>
-        </header>
     )
 }
 
