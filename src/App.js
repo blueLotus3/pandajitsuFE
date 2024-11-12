@@ -1,9 +1,9 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
-import BoxingPage from './pages/BoxingPages.js'
+import BoxingPage from './pages/BoxingPage.js'
 import FullGear from './components/FullGear.js'
-import JitsuGear from './components/JitsuGear.js'
-import ThaiGear from './components/ThaiGear.js'
+import JitsuPage from './pages/JitsuPage.js'
+import ThaiPage from './pages/ThaiPage.js'
 import Nav from './components/Nav.js'
 import IndivGear from './components/IndivGear'
 
@@ -15,9 +15,9 @@ function App() {
       <Routes>
         <Route path='/' element={<FullGear/>} />
         <Route path='/details/:id' element={<IndivGear />} />
-        <Route path='/boxing' element={<BoxingPage/>} />
-        <Route path='/jiujitsu' element={<JitsuGear/>} />
-        <Route path='/muaythai' element={<ThaiGear/>} />
+        <Route path='/boxing' element={<BoxingPage />} />
+        <Route path='/jiujitsu' element={<JitsuPage />} />
+        <Route path='/muaythai' element={<ThaiPage />} />
       </Routes>
     </div>
   );

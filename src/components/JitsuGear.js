@@ -1,15 +1,30 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import data from './GearApi.js'
 
 const JitsuGear = () => {
+
+    const gear = data;
+
+    const targetIds = [1, 4, 7];
+
+    const jitsuItems = gear.filter(item => targetIds.includes(item.id));
+
     return (
-        <Link to={'/jiujitsu'}>
-        <div className="boxingDiv">
-            <h2>This is the jiujitsu gear section</h2>
-            </div>
-        </Link>
-    ) 
-}
+        <div className="jitsuDiv">
+        <ul>
+        {jitsuItems.map(item => (
+            <Link key={item.id} to={`/details/${item.id}`}>
+        <li key={item.id}>
+            <img src={item.gearPic} alt="PandaJitsuGear"></img>
+            <p>{item.gearName}</p>
+            <p>${item.gearPrice}</p>
+            </li>
+            </Link>
+        ))}
+    </ul>
+    </div>
+    ); 
+};
 
 export default JitsuGear
