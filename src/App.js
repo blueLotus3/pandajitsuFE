@@ -5,6 +5,7 @@ import FullGear from './components/FullGear.js'
 import JitsuGear from './components/JitsuGear.js'
 import ThaiGear from './components/ThaiGear.js'
 import Nav from './components/Nav.js'
+import IndivGear from './components/IndivGear'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Nav/>
       <Routes>
         <Route path='/' element={<FullGear/>} />
+        <Route path='/details/:id' element={<IndivGear />} />
         <Route path='/boxing' element={<BoxingGear/>} />
         <Route path='/jiujitsu' element={<JitsuGear/>} />
         <Route path='/muaythai' element={<ThaiGear/>} />
