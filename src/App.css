@@ -17,6 +17,10 @@ body {
   text-align: center;
 }
 
+.boxingDiv {
+  text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
 
 /* header */

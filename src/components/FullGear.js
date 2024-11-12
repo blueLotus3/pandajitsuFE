@@ -4,10 +4,11 @@ import data from './GearApi.js'
 
 
 const FullGear = () => {
-
+    /* data taken from GearApi.js */
     const gear = data;
 
     return (
+        /* Map Function for rendering all pieces of equipment */
         <div className="fullDiv">
             <ul>
             {gear.map((item) => (
