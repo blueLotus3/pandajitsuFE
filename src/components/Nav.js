@@ -25,9 +25,6 @@ const Nav = () => {
             <Link to ='/muaythai'>
                 <li className="nav-item"><p className="nav-link">Muay Thai Gear</p></li>
                 </Link>
-            <Link to ='/cart'>
-                <li className="nav-item"><p className="nav-link">Shopping Cart</p></li>
-                </Link>
                 </ul>
                 </nav>
                 </header>

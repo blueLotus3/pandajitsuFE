@@ -6,7 +6,6 @@ import IndivGear from './components/IndivGear'
 import BoxingPage from './pages/BoxingPage.js'
 import JitsuPage from './pages/JitsuPage.js'
 import ThaiPage from './pages/ThaiPage.js'
-import CartPage from './pages/CartPage'
 
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
         <Route path='/boxing' element={<BoxingPage />} />
         <Route path='/jiujitsu' element={<JitsuPage />} />
         <Route path='/muaythai' element={<ThaiPage />} />
-        <Route path='/cart' element={<CartPage />} />
       </Routes>
     </div>
   );
