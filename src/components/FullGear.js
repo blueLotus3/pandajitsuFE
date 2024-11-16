@@ -1,4 +1,4 @@
-import React, { useContext }  from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import data from './GearApi.js'
 import { CartContext } from './Cart.js';

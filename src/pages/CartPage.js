@@ -7,6 +7,7 @@ const CartPage = () => {
 
   return (
     <div>
+      <h2>Cart</h2>
         <Link to='/cart'>
       <ul>
         {cartItems.map((item) => (

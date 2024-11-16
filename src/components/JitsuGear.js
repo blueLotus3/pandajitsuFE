@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import data from './GearApi.js'
+import { CartContext } from './Cart.js';
 
 const JitsuGear = () => {
 
@@ -10,17 +11,20 @@ const JitsuGear = () => {
 
     const jitsuItems = gear.filter(item => targetIds.includes(item.id));
 
+    const { addItem } = useContext(CartContext);
+
     return (
         <div className="jitsuDiv">
         <ul>
         {jitsuItems.map(item => (
-            <Link key={item.id} to={`/details/${item.id}`}>
         <li key={item.id}>
+            <Link key={item.id} to={`/details/${item.id}`}>
             <img src={item.gearPic} alt="PandaJitsuGear"></img>
+            </Link>
             <p>{item.gearName}</p>
             <p>${item.gearPrice}</p>
+            <button onClick={() => addItem(item)}>Add to Cart</button> 
             </li>
-            </Link>
         ))}
     </ul>
     </div>

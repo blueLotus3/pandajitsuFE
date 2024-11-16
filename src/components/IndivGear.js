@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import data from './GearApi.js'
+import { CartContext } from './Cart.js';
 
 const IndivGear = ({ item }) => {
     /* Params used to render specific piece of gear when clicked from FullGear.js */
@@ -8,7 +9,7 @@ const IndivGear = ({ item }) => {
 
     const indivGear = data.find(item => item.id === parseInt(id, 10))
 
-
+    const { addItem } = useContext(CartContext);
 
     return (
         <div className="IndivDiv">
@@ -17,6 +18,7 @@ const IndivGear = ({ item }) => {
             <img src={indivGear.gearPic} alt="PandaJitsuGear"></img>
             <p>${indivGear.gearPrice}</p>
             <p>{indivGear.gearDesc}</p>
+            <button onClick={() => addItem(indivGear)}>Add to Cart</button> 
             </div>
              
     )
