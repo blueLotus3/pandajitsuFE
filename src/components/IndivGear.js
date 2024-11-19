@@ -9,7 +9,7 @@ const IndivGear = ({ item }) => {
 
     const indivGear = data.find(item => item.id === parseInt(id, 10))
 
-    const { addItem } = useContext(CartContext);
+    const { addToCart } = useContext(CartContext);
 
     return (
         <div className="IndivDiv">
@@ -18,7 +18,7 @@ const IndivGear = ({ item }) => {
             <img src={indivGear.gearPic} alt="PandaJitsuGear"></img>
             <p>${indivGear.gearPrice}</p>
             <p>{indivGear.gearDesc}</p>
-            <button onClick={() => addItem(indivGear)}>Add to Cart</button> 
+            <button onClick={() => addToCart(indivGear)}>Add to Cart</button> 
             </div>
              
     )

@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 import { CartContext } from '../components/Cart.js';
 
 const CartPage = () => {
-  const { cartItems, addItem ,removeItem } = useContext(CartContext);
-  const itemsPrice = cartItems.reduce((a, c) => a + c.gearPrice * (c.qty || 1),0);
+  const { cartItems, removeFromCart, updateQuantity} = useContext(CartContext);
+
+  /* Variables for calculating shipping cost */
+  const itemsPrice = cartItems.reduce((a, c) => a + c.gearPrice * (c.quantity || 1),0);
   const taxPrice = itemsPrice * 0.14;
   const roundedTax = Math.round(taxPrice * 100) / 100;
   const shippingPrice = itemsPrice > 2000 ? 0 : 50;
@@ -22,11 +24,12 @@ const CartPage = () => {
         <div key={item.id} className="row">
             <div className="col-2">{item.gearName}</div>
             <div className="col-2">
-                <button onClick={() => addItem(item)} className="add">+</button>
-                <button onClick={() => removeItem(item.id)} className="remove">-</button>
+            <button onClick={() => removeFromCart(item.id)}>Remove</button>
+            <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="add">+</button>    
+            <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="remove">-</button>
             </div>
             <div className="col-2 text-right">
-                {item.qty} x ${item.gearPrice}
+                {item.quantity} x ${item.gearPrice}
             </div>
         </div>
     ))}

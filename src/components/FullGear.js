@@ -8,7 +8,8 @@ const FullGear = () => {
     const gear = data;
 
     /* CartContext used for adding gear to Shopping Cart */
-    const { addItem } = useContext(CartContext);
+    const { addToCart } = useContext(CartContext);
+
     
     return (
         /* Map Function for rendering all pieces of equipment */
@@ -21,7 +22,7 @@ const FullGear = () => {
                 </Link>
                 <p>{item.gearName}</p>
                 <p>${item.gearPrice}</p>
-                <button onClick={() => addItem(item)}>Add to Cart</button> 
+                <button onClick={() => addToCart(item)}>Add to Cart</button> 
                 </li>
             ))}
             </ul>

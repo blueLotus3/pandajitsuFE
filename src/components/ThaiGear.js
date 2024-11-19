@@ -11,7 +11,7 @@ const ThaiGear = () => {
 
     const thaiItems = gear.filter(item => targetIds.includes(item.id));
 
-    const { addItem } = useContext(CartContext);
+    const { addToCart } = useContext(CartContext);
 
     return (
         <div className="thaiDiv">
@@ -23,7 +23,7 @@ const ThaiGear = () => {
             </Link>
             <p>{item.gearName}</p>
             <p>${item.gearPrice}</p>
-            <button onClick={() => addItem(item)}>Add to Cart</button> 
+            <button onClick={() => addToCart(item)}>Add to Cart</button> 
             </li>
         ))}
     </ul>
