@@ -6,7 +6,10 @@ import { CartContext } from './Cart.js';
 const FullGear = () => {
     /* data taken from GearApi.js */
     const gear = data;
+
+    /* CartContext used for adding gear to Shopping Cart */
     const { addItem } = useContext(CartContext);
+    
     return (
         /* Map Function for rendering all pieces of equipment */
         <div className="fullDiv">

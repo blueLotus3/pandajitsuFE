@@ -3,7 +3,7 @@ import { createContext, useReducer } from 'react';
 const CartContext = createContext();
 
 const initialState = {
-  cartItems: [],
+  cartItems: []
 };
 
 const cartReducer = (state, action) => {
