@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import { CartContext } from '../components/Cart.js';
 
 const CartPage = () => {
-  const { cartItems, removeFromCart, updateQuantity} = useContext(CartContext);
+  const {cartItems, removeFromCart, updateQuantity} = useContext(CartContext);
+
 
   /* Variables for calculating shipping cost */
   const itemsPrice = cartItems.reduce((a, c) => a + c.gearPrice * (c.quantity || 1),0);
@@ -24,9 +25,9 @@ const CartPage = () => {
         <div key={item.id} className="row">
             <div className="col-2">{item.gearName}</div>
             <div className="col-2">
-            <button onClick={() => removeFromCart(item.id)}>Remove</button>
             <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="add">+</button>    
             <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="remove">-</button>
+            <button onClick={() => removeFromCart(item.id)}>Remove</button>
             </div>
             <div className="col-2 text-right">
                 {item.quantity} x ${item.gearPrice}

@@ -4,6 +4,7 @@ const CartContext = createContext();
 
 const initialState = {
   cartItems: [],
+  count: 0,
 };
 
 const cartReducer = (state, action) => {
@@ -15,7 +16,7 @@ const cartReducer = (state, action) => {
           ...state,
           cartItems: state.cartItems.map(item => 
             item.id === action.payload.id ? 
-            { ...item, quantity: item.quantity + action.payload.quantity } : 
+            { ...item, quantity: item.quantity + action.payload.quantity} : 
             item
           )
         };
@@ -35,7 +36,7 @@ const cartReducer = (state, action) => {
         ...state,
         cartItems: state.cartItems.map(item => 
           item.id === action.payload.id ? 
-          { ...item, quantity: action.payload.quantity } : 
+          { ...item, quantity: action.payload.quantity} : 
           item
         )
       };
@@ -56,7 +57,11 @@ const CartProvider = ({ children }) => {
   };
 
   const updateQuantity = (itemId, quantity) => {
+    if (quantity !== 0) {
     dispatch({ type: 'UPDATE_QUANTITY', payload: { id: itemId, quantity } });
+    } else {
+      removeFromCart(itemId)
+    }
   };
 
   const cartValue = {
