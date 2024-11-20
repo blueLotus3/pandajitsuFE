@@ -4,7 +4,6 @@ const CartContext = createContext();
 
 const initialState = {
   cartItems: [],
-  count: 0,
 };
 
 const cartReducer = (state, action) => {
@@ -16,7 +15,7 @@ const cartReducer = (state, action) => {
           ...state,
           cartItems: state.cartItems.map(item => 
             item.id === action.payload.id ? 
-            { ...item, quantity: item.quantity + action.payload.quantity} : 
+            { ...item, quantity: item.quantity + isNaN(action.payload.quantity)} : 
             item
           )
         };
@@ -49,7 +48,7 @@ const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
   const addToCart = (item) => {
-    dispatch({ type: 'ADD_ITEM', payload: item });
+    dispatch({ type: 'ADD_ITEM', payload: item});
   };
 
   const removeFromCart = (itemId) => {

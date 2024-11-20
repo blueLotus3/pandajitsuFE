@@ -22,7 +22,7 @@ const FullGear = () => {
                 </Link>
                 <p>{item.gearName}</p>
                 <p>${item.gearPrice}</p>
-                <button onClick={() => addToCart(item)}>Add to Cart</button> 
+                <button onClick={() => addToCart(item)}>Add to Cart</button>
                 </li>
             ))}
             </ul>
