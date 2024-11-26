@@ -33,9 +33,9 @@ body {
   background-color: #fff;
 }
 
-.header li a {
+.header li p {
   display: block;
-  padding: 20px 20px;
+  padding: 6px;
   border-right: 1px solid #f4f4f4;
   text-decoration: none;
 }
@@ -125,5 +125,32 @@ body {
   top: 0;
 }
 
+.PandaJitsuGear{
+  width: 218px;
+  border-radius: 25px;
+}
+
+.PandaCartImg {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.AddButtn {
+  border-radius: 20px;
+  background-color: linear-gradient(#8e9eab, #eef2f3);
+  cursor: pointer;
+  background: transparent;
+  transition: 1s ease-in-out;
+}
+
+.AddButtn:hover {
+  background-color:#70e1f5;
+  transition: 1s ease-in-out;
+}
+
+.AddButtn:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
 
 }

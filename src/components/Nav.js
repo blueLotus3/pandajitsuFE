@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 
 const Nav = () => {
-
     return (
             <header className="header">
             <nav className="navbar">

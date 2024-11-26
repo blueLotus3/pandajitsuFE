@@ -19,11 +19,11 @@ const ThaiGear = () => {
         {thaiItems.map(item => (
         <li key={item.id}>
             <Link key={item.id} to={`/details/${item.id}`}>
-            <img src={item.gearPic} alt="PandaJitsuGear"></img>
+            <img src={item.gearPic} className="PandaJitsuGear" alt="PandaJitsuGear"></img>
             </Link>
             <p>{item.gearName}</p>
             <p>${item.gearPrice}</p>
-            <button onClick={() => addToCart(item)}>Add to Cart</button> 
+            <button onClick={() => addToCart(item)} className="AddButtn">Add to Cart</button> 
             </li>
         ))}
     </ul>

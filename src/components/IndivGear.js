@@ -15,10 +15,10 @@ const IndivGear = ({ item }) => {
         <div className="IndivDiv">
             <Link to={'/'}>X</Link>
             <h2>{indivGear.gearName}</h2>
-            <img src={indivGear.gearPic} alt="PandaJitsuGear"></img>
+            <img src={indivGear.gearPic} className="PandaJitsuGear" alt="PandaJitsuGear"></img>
             <p>${indivGear.gearPrice}</p>
             <p>{indivGear.gearDesc}</p>
-            <button onClick={() => addToCart(indivGear)}>Add to Cart</button> 
+            <button onClick={() => addToCart(indivGear)} className="AddButtn">Add to Cart</button> 
             </div>
              
     )
