@@ -9,6 +9,7 @@ li {
 
 body {
   margin: 0;
+  padding: 0;
   font-family: Helvetica, sans-serif;
   background-color: #f4f4f4;
 }
@@ -132,9 +133,101 @@ body {
 
 .PandaCartImg {
   width: 100px;
+  height: 100px;
   border-radius: 10px;
 }
 
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.col-2 {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+}
+
+/* add button for cart page */
+.add {
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.add:hover {
+  background-color:#70e1f5;
+  transition: 1s ease-in-out;
+}
+
+.add:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+/* minus button for cart page */
+.remove {
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.remove:hover {
+  background-color:#70e1f5;
+  transition: 1s ease-in-out;
+}
+
+.remove:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+/* remove button for cart page */
+.deletebtn {
+  background: #ff4d4d;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.deletebtn:hover {
+  background-color: black;
+  transition: 1s ease-in-out;
+}
+
+.deletebtn:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+/* Checkout button for cart page */
+.checkout {
+  background: blue;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.checkout:hover {
+  background-color: black;
+  transition: 1s ease-in-out;
+}
+
+.checkout:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+/* add to cart button */
 .AddButtn {
   border-radius: 20px;
   background-color: linear-gradient(#8e9eab, #eef2f3);

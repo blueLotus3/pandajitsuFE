@@ -27,7 +27,7 @@ const CartPage = () => {
             <div className="col-2">
             <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="add">+</button>    
             <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="remove">-</button>
-            <button onClick={() => removeFromCart(item.id)}>Remove</button>
+            <button onClick={() => removeFromCart(item.id)} className="deletebtn">Remove</button>
             </div>
             <div className="col-2 text-right">
                 {item.quantity} x ${item.gearPrice}
@@ -55,7 +55,7 @@ const CartPage = () => {
         </div>
         <hr/>
         <div className="row">
-            <button onClick={() => alert('Implement Checkout')}>
+            <button onClick={() => alert('Implement Checkout')} className="checkout">
                 Checkout
             </button>
         </div>
