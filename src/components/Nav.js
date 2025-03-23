@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContext } from './Cart.js';
 
 
 const Nav = () => {
+    const { cartItems } = useContext(CartContext);
+    const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0)
+
     return (
             <header className="header">
             <nav className="navbar">
@@ -25,7 +29,9 @@ const Nav = () => {
                 <li className="nav-item"><p className="nav-link">Muay Thai Gear</p></li>
                 </Link>
             <Link to ='/cart'>
-                <li className="nav-item"><p className="nav-link">Shopping Cart</p></li>
+                <li className="nav-item">
+    <p className="nav-link">Shopping Cart ({totalItems})</p>
+                    </li>
                 </Link>
                 </ul>
                 </nav>

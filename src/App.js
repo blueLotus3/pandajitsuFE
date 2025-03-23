@@ -12,8 +12,8 @@ import CartPage from './pages/CartPage.js'
 function App() {
   return (
     <div className="App">
-      <Nav/>
       <CartProvider>
+      <Nav/>
       <Routes>
         <Route path='/' element={<FullGear/>} />
         <Route path='/details/:id' element={<IndivGear />} />

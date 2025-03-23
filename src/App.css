@@ -48,6 +48,8 @@ body {
 
 .pandaLogo {
   display: block;
+  margin-top: 18px;
+  margin-left: 16px;
   border-radius: 20px;
   float: left;
   text-decoration: none;
@@ -161,7 +163,7 @@ body {
 
 .add:hover {
   background-color:#70e1f5;
-  transition: 1s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .add:active {
@@ -179,7 +181,7 @@ body {
 
 .remove:hover {
   background-color:#70e1f5;
-  transition: 1s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .remove:active {
@@ -199,7 +201,7 @@ body {
 
 .deletebtn:hover {
   background-color: black;
-  transition: 1s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .deletebtn:active {
@@ -219,7 +221,7 @@ body {
 
 .checkout:hover {
   background-color: black;
-  transition: 1s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .checkout:active {
@@ -233,12 +235,12 @@ body {
   background-color: linear-gradient(#8e9eab, #eef2f3);
   cursor: pointer;
   background: transparent;
-  transition: 1s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .AddButtn:hover {
   background-color:#70e1f5;
-  transition: 1s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .AddButtn:active {

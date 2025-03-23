@@ -1,6 +1,5 @@
 import { createContext, useReducer } from 'react';
 
-const CartContext = createContext();
 
 const initialState = {
   cartItems: [],
@@ -12,7 +11,7 @@ const cartReducer = (state, action) => {
       const existingItem = state.cartItems.find(item => item.id === action.payload.id);
       if (existingItem) {
         return {
-          ...state,
+          ...state, 
           cartItems: state.cartItems.map(item => 
             item.id === action.payload.id ? 
             { ...item, quantity: item.quantity + isNaN(action.payload.quantity)} : 
@@ -44,6 +43,13 @@ const cartReducer = (state, action) => {
   }
 };
 
+const CartContext = createContext({
+  cartItems: [],
+  addToCart: () => {},
+  removeFromCart: () => {},
+  updateQuantity: () => {},
+});
+
 const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
@@ -69,6 +75,7 @@ const CartProvider = ({ children }) => {
     removeFromCart,
     updateQuantity,
   };
+
 
   return (
     <CartContext.Provider value={cartValue}>
