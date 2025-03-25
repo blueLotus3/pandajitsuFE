@@ -4,7 +4,9 @@ import { CartContext } from '../components/Cart.js';
 
 const CartPage = () => {
   const {cartItems, removeFromCart, updateQuantity} = useContext(CartContext);
-  const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0)
+  const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+
+
 
   /* Variables for calculating shipping cost */
   const itemsPrice = cartItems.reduce((a, c) => a + c.gearPrice * (c.quantity || 1),0);
