@@ -63,6 +63,20 @@ body {
   transition: max-height .2s ease-out;
 }
 
+/* cart badge */
+.cart-badge {
+  position: absolute;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 5px 8px;
+  min-width: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
 /* menu icon */
 
 .header .menu-icon {
@@ -239,6 +253,7 @@ body {
 /* add to cart button */
 .AddButtn {
   border-radius: 20px;
+  padding: 15px 30px;
   background-color: yellow;
   cursor: pointer;
   transition: 0.2s ease-in-out;

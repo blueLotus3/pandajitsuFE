@@ -15,6 +15,7 @@ const Nav = () => {
             </Link>
             <input className="menu-btn" type="checkbox" id="menu-btn" />
             <label className="menu-icon" htmlFor="menu-btn" id="nav"><span className="navicon"></span></label>
+            {totalItems > 0 && <span className="cart-badge" id="cart-count">{totalItems}</span>}
                 <ul className="menu">
             <Link to ='/'>
                 <li className="nav-item"><p className="nav-link">Home</p></li>
