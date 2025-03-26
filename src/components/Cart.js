@@ -3,11 +3,12 @@ import { createContext, useReducer, useEffect } from 'react';
 
 const initialState = {
   cartItems: [],
+  count: 0,
 };
 
 const getInitialState = () => {
   const savedCart = localStorage.getItem('savedCart');
-  return savedCart ? JSON.parse(savedCart) : {initialState};
+  return savedCart ? JSON.parse(savedCart) : initialState;
 }
 
 
@@ -62,7 +63,7 @@ const CartProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem('savedCart', JSON.stringify(state));
-  })
+  }, [state])
 
   const addToCart = (item) => {
     dispatch({ type: 'ADD_ITEM', payload: item});
