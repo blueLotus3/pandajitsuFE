@@ -14,7 +14,7 @@ const Nav = () => {
             <img src={'https://res.cloudinary.com/ds7w3ysag/image/upload/v1638827235/Screen_Shot_2021-12-06_at_1.46.01_PM_psnicm.png'} alt="pandaLogo" className="pandaLogo"/>
             </Link>
             <input className="menu-btn" type="checkbox" id="menu-btn" />
-            <label className="menu-icon" htmlFor="menu-btn"><span className="navicon"></span></label>
+            <label className="menu-icon" htmlFor="menu-btn" id="nav"><span className="navicon"></span></label>
                 <ul className="menu">
             <Link to ='/'>
                 <li className="nav-item"><p className="nav-link">Home</p></li>

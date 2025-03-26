@@ -7,7 +7,7 @@ const initialState = {
 
 const getInitialState = () => {
   const savedCart = localStorage.getItem('savedCart');
-  return savedCart ? JSON.parse(savedCart) : {count: 0};
+  return savedCart ? JSON.parse(savedCart) : {initialState};
 }
 
 
