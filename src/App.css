@@ -14,6 +14,10 @@ body {
   background-color: #f4f4f4;
 }
 
+.fullDiv img {
+  border-radius: 20px;
+}
+
 .IndivDiv {
   text-align: center;
 }
