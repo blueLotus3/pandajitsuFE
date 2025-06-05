@@ -22,7 +22,7 @@ body {
   text-align: center;
 }
 
-
+/* mobile styles */
 @media only screen and (max-width: 768px) {
 
 /* header */
@@ -31,7 +31,6 @@ body {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #fff;
 }
 
 .header li p {
@@ -267,6 +266,85 @@ body {
 .AddButtn:active {
   transform: scale(0.98);
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) {
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+.header ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.header li p {
+  display: block;
+  border-right: 1px #f4f4f4;
+  text-decoration: none;
+}
+
+.header li p:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.fullDiv ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.fullDiv ul li {
+  padding: 14px;
+}
+
+.fullDiv img {
+  border-radius: 20px;
+}
+
+.boxingDiv ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.boxingDiv img {
+  border-radius: 20px;
+}
+
+.jitsuDiv ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.jitsuDiv img {
+  border-radius: 20px;
+}
+
+.thaiDiv ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.thaiDiv img {
+  border-radius: 20px;
 }
 
 }

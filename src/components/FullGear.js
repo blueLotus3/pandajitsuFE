@@ -10,7 +10,6 @@ const FullGear = () => {
     /* CartContext used for adding gear to Shopping Cart */
     const { addToCart } = useContext(CartContext);
 
-    
     return (
         /* Map Function for rendering all pieces of equipment */
         <div className="fullDiv">
@@ -18,7 +17,10 @@ const FullGear = () => {
             {gear.map((item) => (
             <li key={item.id}>
                 <Link key={item.id} to={`/details/${item.id}`}>
-                <img src={item.gearPic} className="PandaJitsuGear" alt="PandaJitsuGear"></img>
+                <img 
+                src={item.gearPic} 
+                alt="PandaJitsuGear">    
+                </img>
                 </Link>
                 <p>{item.gearName}</p>
                 <p>${item.gearPrice}</p>
